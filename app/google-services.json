@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "906080969561",
+    "project_id": "spacerocket-bf18f",
+    "storage_bucket": "spacerocket-bf18f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906080969561:android:4d6ae1f64b4017fb0ee248",
+        "android_client_info": {
+          "package_name": "it.school.sumdu.spacerocket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906080969561-8bend9a0uvak662skih23bcqe576rn1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1JspwiyiRmNtAxOIVp0K4Ez5f_4Z6_Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906080969561-8bend9a0uvak662skih23bcqe576rn1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
