@@ -3,8 +3,12 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="register">Register</string>
-    <string name="click_to_login">Click to login</string>
-    <string name="click_to_register">Registration</string>
-    <string name="logout">Logout</string>
+    <string name="register">Sign up</string>
+    <string name="click_to_login">Login</string>
+    <string name="click_to_register">Sign up</string>
+    <string name="logout">Log out</string>
+    <string name="topscore"></string>
+    <string name="highest">Record:</string>
+    <string name="best_3">Best 3</string>
+    <string name="your_points">Your points:</string>
 </resources>

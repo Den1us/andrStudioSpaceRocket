@@ -15,6 +15,8 @@ import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 
+import androidx.core.content.res.ResourcesCompat;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -42,7 +44,7 @@ public class GameView extends View {
     public GameView(Context context) {
         super(context);
         this.context = context;
-        background = BitmapFactory.decodeResource(getResources(), R.drawable.background3);
+        background = BitmapFactory.decodeResource(getResources(), R.drawable.back_game_1);
         ground = BitmapFactory.decodeResource(getResources(), R.drawable.ground);
         rocket = BitmapFactory.decodeResource(getResources(), R.drawable.rocket);
         Display display = ((Activity) getContext()).getWindowManager().getDefaultDisplay();
@@ -62,7 +64,7 @@ public class GameView extends View {
         textPaint.setColor(Color.rgb(255, 165, 0));
         textPaint.setTextSize(TEXT_SIZE);
         textPaint.setTextAlign(Paint.Align.LEFT);
-//        textPaint.setTypeface(ResourcesCompat.getFont(context, R.font.kenney_blocks));
+        textPaint.setTypeface(ResourcesCompat.getFont(context, R.font.astronaut_personaluse));
         healthPaint.setColor(Color.GREEN);
         random = new Random();
         rocketX = dWidth / 2 - rocket.getWidth() / 2;
@@ -100,10 +102,13 @@ public class GameView extends View {
         }
 
         for (int i=0; i<spikes.size(); i++){
-            if (spikes.get(i).spikeX + spikes.get(i).getSpikeWidth() >= rocketX
-            && spikes.get(i).spikeX <= spikes.get(i).getSpikeWidth()
-            && spikes.get(i).spikeY + spikes.get(i).getSpikeWidth() >= rocketY
-            && spikes.get(i).spikeY + spikes.get(i).getSpikeWidth() <= rocketY + rocket.getHeight()){
+            Asteroid spike = spikes.get(i);
+            if (
+                spike.spikeX + spike.getSpikeWidth() >= rocketX
+                && spike.spikeX <= rocketX + spike.getSpikeWidth()
+                && spike.spikeY + spike.getSpikeWidth() >= rocketY
+                && spike.spikeY + spike.getSpikeWidth() <= rocketY + rocket.getHeight()
+            ) {
                 life--;
                 spikes.get(i).resetPosition();
                 if (life ==0) {

@@ -7,7 +7,7 @@ import android.graphics.BitmapFactory;
 import java.util.Random;
 
 public class Asteroid {
-    Bitmap asteroids[] = new Bitmap[4];
+    Bitmap asteroids[] = new Bitmap[3];
     int spikeFrame = 0;
     int spikeX, spikeY, spikeVelociy;
     Random random;
@@ -16,7 +16,6 @@ public class Asteroid {
         asteroids[0] = BitmapFactory.decodeResource(context.getResources(), R.drawable.asteroid1);
         asteroids[1] = BitmapFactory.decodeResource(context.getResources(), R.drawable.asteroid2);
         asteroids[2] = BitmapFactory.decodeResource(context.getResources(), R.drawable.asteroid3);
-        asteroids[3] = BitmapFactory.decodeResource(context.getResources(), R.drawable.asteroid4);
         random = new Random();
         resetPosition();
     }

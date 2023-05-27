@@ -6,39 +6,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="#476D95"
+    android:background="@drawable/back_main"
+    android:padding="15dp"
     android:gravity="center">
 
     <ImageView
-        android:layout_width="164dp"
-        android:layout_height="71dp"
-        app:srcCompat="@drawable/titlee" />
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        app:srcCompat="@drawable/welcome" />
 
     <TextView
         android:id="@+id/user_details"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/astronaut_personaluse"
+        android:paddingBottom="5dp"
+        android:textSize="24sp"
+        android:textColor="#D1AE8B"
         android:text="Hello World!" />
 
     <ImageView
-        android:layout_width="130dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="280dp"
+        android:layout_height="265dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="40dp"
-        app:srcCompat="@drawable/rocket" />
+        app:srcCompat="@drawable/maintitlee" />
+
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#AD3E00"
+        android:fontFamily="@font/astronaut_personaluse"
+        android:onClick="startGame"
         android:text="Start"
-        android:textSize="32sp"
-        android:textColor="@android:color/white"
-        android:backgroundTint="#bb8044"
-        android:onClick="startGame"/>
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <Button
         android:text="@string/logout"
         android:id="@+id/logout"
-        android:layout_width="wrap_content"
+        android:fontFamily="@font/astronaut_personaluse"
+        android:textColor="#80FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginTop="7dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
